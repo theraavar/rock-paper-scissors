@@ -15,7 +15,8 @@ body {
   width; 100vw;
 }
 .flex-container {
-  display: flex; 
+  display: flex;
+  flex-direction: row;
 }
 .flex-box {
   flex: 1;
