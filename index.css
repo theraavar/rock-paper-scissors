@@ -1,0 +1,25 @@
+/* These are global settings which we can override later. */
+* {
+  align-items: center; /* Y-Axis */
+  font-family: 'Copperplate', sans-serif;
+  font-size: 10px;
+  justify-content: center; /* X-Axis */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* X-Axis */
+}
+/* This is our primary box. */
+body {
+  height: 100vh;
+  width; 100vw;
+}
+.flex-container {
+  display: flex; 
+}
+.flex-box {
+  flex: 1;
+}
+/* Ensures rules of specificality for nav and main. */
+#header, nav .flex-box, main .flex-box, #footer {
+  flex: 0 0 100%;
+}
