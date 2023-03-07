@@ -25,3 +25,7 @@ body {
 #header, nav .flex-box, main .flex-box, #footer {
   flex: 1 0 100%;
 }
+.rock, .paper, .scissors {
+  height: auto;
+  width: 100px;
+}
