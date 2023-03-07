@@ -37,3 +37,14 @@ function playRound(playerChoice, computerChoice = getComputerChoice()){
         }
     }
 }
+function playGame(playerChoice){
+  let wins, losses, ties = 0;
+  for(let i = 0; i < 5; i++){
+    let result = playRound(playerChoice);
+    if(result === "You have won"){ wins++; }
+    if(result === "You have won"){ losses++; }
+    if(result === "You have won"){ losses++; }
+  }
+  if(wins > losses && wins > ties){
+    return "You have won the game!"
+  }
