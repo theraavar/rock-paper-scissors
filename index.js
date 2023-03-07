@@ -10,9 +10,11 @@ function getPlayerChoice(){
     return undefined;
   }                                  
 }
+/* Returns a value between 0 and 2. */
 function getComputerChoice(){
   return Math.floor(Math.random() * 3);
 }
+/* Simply comparison between the two using switches. */
 function playRound(playerChoice, computerChoice = getComputerChoice()){
     switch (playerChoice) {
         /* If the player is rock. */
