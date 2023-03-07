@@ -14,5 +14,24 @@ function getComputerChoice(){
   return Math.floor(Math.random() * 3);
 }
 function playRound(playerChoice, computerChoice){
-  
+    switch (playerChoice) {
+        /* If the player is rock. */
+        0: switch (computerChoice) {
+            0: return "You have tied."
+            1: return "You have lost."
+            2: return "You have won."
+        }
+        /* If the player is paper. */
+        1: switch (computerChoice) {
+            0: return "You have won."
+            1: return "You have tied."
+            2: return "You have lost."
+        }
+        /* If the player is scissors. */
+        2: switch (computerChoice) {
+            0: return "You have lost."
+            1: return "You have won."
+            2: return "You have tied."
+        }
+    }
 }
