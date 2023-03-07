@@ -1,6 +1,7 @@
 /* These are global settings which we can override later. */
 * {
   align-items: center; /* Y-Axis */
+  border: 1px solid red;
   font-family: 'Copperplate', sans-serif;
   font-size: 10px;
   justify-content: center; /* X-Axis */
