@@ -23,5 +23,5 @@ body {
 }
 /* Ensures rules of specificality for nav and main. */
 #header, nav .flex-box, main .flex-box, #footer {
-  flex: 0 0 100%;
+  flex: 1 0 100%;
 }
