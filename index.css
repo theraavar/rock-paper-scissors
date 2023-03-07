@@ -26,6 +26,7 @@ body {
   flex: 1 0 100%;
 }
 .rock, .paper, .scissors {
+  display: block;
   height: auto;
   width: 100px;
 }
