@@ -13,7 +13,7 @@ function getPlayerChoice(){
 function getComputerChoice(){
   return Math.floor(Math.random() * 3);
 }
-function playRound(playerChoice, computerChoice){
+function playRound(playerChoice, computerChoice = getComputerChoice()){
     switch (playerChoice) {
         /* If the player is rock. */
         0: switch (computerChoice) {
