@@ -24,6 +24,19 @@ body {
 /* Ensures rules of specificality for nav and main. */
 #header, nav .flex-box, main .flex-box, #footer {
   flex: 1 0 100%;
+  min-width: calc(100% - 32px);
+}
+#header {
+  min-height: 20%;
+}
+nav {
+  min-height: 5%;
+}
+main {
+  min-height: 50%; 
+}
+#footer {
+  min-height: 5%;
 }
 .rock, .paper, .scissors {
   display: block;
