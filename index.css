@@ -11,9 +11,8 @@
 }
 /* This is our primary box. */
 body {
-  height: 100vh;
-  width: 100vw;
-  min-width: fit-content;
+  height: 100%;
+  width: 100%;
 }
 .flex-container {
   display: flex;
