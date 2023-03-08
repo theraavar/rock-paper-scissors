@@ -7,4 +7,19 @@
   padding: 0;
   text-align: center;
 }
+.container {
+  height: 100vh;
+  padding: 0 32px;
+  width: 100vw;
+}
+.flex-container {
+  display: flex;
+}
+.flex-box {
+  flex: auto;
+}
+#header, #content, #footer {
+  /*flex: 0 0 100%;*/
+  min-width: calc(100vw - 32px); 
+}
 
