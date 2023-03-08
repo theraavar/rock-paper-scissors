@@ -22,8 +22,8 @@
 }
 /* Sections */
 #header, #content, #footer {
-  /*flex: 0 0 100%;*/
-  min-width: calc(100vw - 32px); 
+  flex: 0 0 100%;
+  /*min-width: calc(100vw - 32px);*/ 
 }
 #header {
   min-height: 20vh;
