@@ -7,6 +7,7 @@
   padding: 0;
   text-align: center;
 }
+/* Container and Flexbox */
 .container {
   height: 100vh;
   padding: 0 32px;
@@ -18,8 +19,18 @@
 .flex-box {
   flex: auto;
 }
+/* Sections */
 #header, #content, #footer {
   /*flex: 0 0 100%;*/
   min-width: calc(100vw - 32px); 
+}
+#header {
+  min-height: 20vh;
+}
+#content {
+  min-height: 50vh;
+}
+#footer {
+  min-height: 5vh;
 }
 
