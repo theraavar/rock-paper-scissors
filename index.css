@@ -9,6 +9,7 @@
 }
 /* Container and Flexbox */
 .container {
+  flex-direction: column;
   height: 100vh;
   padding: 0 32px;
   width: 100vw;
