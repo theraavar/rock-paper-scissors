@@ -10,6 +10,7 @@
 }
 .flex-container {
   display: flex;
+  flex-direction: row;
 }
 .flex-box {
   flex: 1;
