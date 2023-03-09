@@ -17,6 +17,7 @@
 /* These are our general containers, and make use of ID specificality to ensure they are not easily overriden. */
 #container {
   height: 100%;
+  padding: 0 32px;
   width: 100%;
 }
 #header, #navigation, #content, #footer {
