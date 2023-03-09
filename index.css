@@ -1,10 +1,11 @@
 * {
   align-items: center;
+  border: 1px solid red;
   font-family: 'Copperplate', sans-serif;
   font-size: 10px;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   text-align: center;
 }
 .flex-container {
