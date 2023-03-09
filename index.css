@@ -1,2 +1,36 @@
-
-
+* {
+  align-items: center;
+  font-family: 'Copperplate', sans-serif;
+  font-size: 10px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+}
+.flex-box {
+  flex: 1;
+}
+/* These are our general containers, and make use of ID specificality to ensure they are not easily overriden. */
+#container {
+  height: 100%;
+  width: 100%;
+}
+#header, #navigation, #content, #footer {
+  /* This should set flex-grow and flex-shrink to 0,and flex-basis to 100% so it extends fully. */
+  flex: 0 0 100%;
+}
+#header {
+  height: 20%;
+}
+#navigation {
+  height: 10%;
+}
+#content {
+  height: 60%;
+}
+#footer {
+  height: 10%;
+}
