@@ -33,10 +33,11 @@ function playGame(rounds){
     let playerScore = 0;
     let computerScore = 0;
     for(let i = 0; i < rounds; i++){
-        let result = playRound("rock", getComputerChoice);
-        if(result.includes("win")){
+        let result = playRound("rock", getComputerChoice());
+        console.log(result);
+        if(result.includes("win") === true){
             playerScore++;
-        }else if(result.includes("lose")){
+        }else if(result.includes("lose") === true){
             computerScore++;
         }
         console.log(playerScore);
