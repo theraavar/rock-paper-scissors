@@ -33,7 +33,8 @@ function playGame(rounds){
     let playerScore = 0;
     let computerScore = 0;
     for(let i = 0; i < rounds; i++){
-        let result = playRound("rock", getComputerChoice());
+        let playerSelection = prompt(); //User input; will be changed to buttons or something later.
+        let result = playRound(playerSelection, getComputerChoice());
         console.log(result);
         if(result.includes("win") === true){
             playerScore++;
@@ -44,7 +45,7 @@ function playGame(rounds){
         console.log(computerScore);
     }
     if(playerScore > computerScore){
-        return "You won the entire game!";
+        return "You won the game! Congratulations!";
     }else if(playerScore < computerScore){
         return "The computer beat you this time!";
     }else{
