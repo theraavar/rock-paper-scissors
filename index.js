@@ -7,8 +7,6 @@ function getComputerChoice(){
     }
 }
 function playRound(playerSelection, computerSelection){
-    console.log(playerSelection);
-    console.log(computerSelection);
     playerSelection = playerSelection.toLowerCase(); //Can't never trust a user to type correctly around here.
     switch(playerSelection){
         case "rock":
