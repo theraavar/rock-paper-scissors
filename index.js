@@ -29,4 +29,25 @@ function playRound(playerSelection, computerSelection){
             }
     }
 }
-console.log(playRound("rock", getComputerChoice()));
+function playGame(rounds){
+    let playerScore = 0;
+    let computerScore = 0;
+    for(let i = 0; i < rounds; i++){
+        let result = playRound("rock", getComputerChoice);
+        if(result.includes("win")){
+            playerScore++;
+        }else if(result.includes("lose")){
+            computerScore++;
+        }
+        console.log(playerScore);
+        console.log(computerScore);
+    }
+    if(playerScore > computerScore){
+        return "You won the entire game!";
+    }else if(playerScore < computerScore){
+        return "The computer beat you this time!";
+    }else{
+        return "It is a tie! So close!";
+    }
+}
+console.log(playGame(5));
