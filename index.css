@@ -1,0 +1,56 @@
+:root {
+    --color-background1: blue;   
+    --color-button1: red;
+}
+*,
+*::before,
+*::after {
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.hidden {
+    /* display: none; */
+}
+/* These are our major containers and their elements. */
+body {
+    background-color: rgb(13, 9, 37);
+    height: 100vh;
+    width: 100vw;
+}
+header {
+    padding: 1% 10% 5% 10%;
+}
+    header > div > p {
+        color: white;
+        font-size: 5rem;
+    }
+main {
+
+}
+footer {
+
+}
+
+/* ---------- */
+
+a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+input[type="image"] {
+    height: auto;
+    width: 20%;
+}
+li {
+    display: inline;
+}
+ul {
+    display: inline-block;
+    list-style-type: none;
+}
