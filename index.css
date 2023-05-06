@@ -11,7 +11,7 @@
     align-items: center;
     box-sizing: border-box;
     color: var(--color-text1);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Alkatra', sans-serif, cursive;
     font-size: 10px;
     justify-content: center;
     margin: 0;
@@ -28,31 +28,26 @@ body {
 }
 header {
     background-color: var(--color-background1);
-    padding: 1% 10% 5% 10%;
+    padding: 1% 10% 3% 10%;
 }
     header > div > p {
         font-size: 5rem;
     }
 main {
     background-color: var(--color-background2);
-    padding: 5% 10%;
+    padding: 3% 10%;
 }
-/*
-    .background {
-        background-image: "./images/flowers.jpg";
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-    }
-*/
     .rounds > p{
         font-size: 3rem;
-        margin: 3%;
+        margin: 1%;
     }
 footer {
     background-color: var(--color-background1);
-    padding: 3% 10% 1% 10%;
+    padding: 2% 10% 1% 10%;
 }
+    footer > p {
+        font-size: 1.5rem;
+    }
 /* ---------- */
 a {
     color: inherit;
@@ -62,6 +57,7 @@ a {
 button {
     background-color: var(--color-button2);
     border: none;
+    border-radius: 1rem;
     font-size: 3rem;
     margin: 1% 2%;
     padding: 1% 2%;
