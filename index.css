@@ -18,9 +18,6 @@
     padding: 0;
     text-align: center;
 }
-.hidden {
-    display: none;
-}
 /* These are our major containers and their elements. */
 body {
     height: 100vh;
@@ -28,16 +25,16 @@ body {
 }
 header {
     background-color: var(--color-background1);
-    padding: 1% 10% 3% 10%;
+    padding: 1rem 10% 2rem 10%;
 }
     header > div > p {
         font-size: 5rem;
     }
 main {
     background-color: var(--color-background2);
-    padding: 3% 10%;
+    padding: 2rem 10%;
 }
-    .rounds > p{
+    .select > p{
         font-size: 3rem;
         margin: 1%;
     }
@@ -48,6 +45,10 @@ footer {
     footer > p {
         font-size: 1.5rem;
     }
+/* ---------- */
+.hidden {
+    /* display: none; */
+}
 /* ---------- */
 a {
     color: inherit;
