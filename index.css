@@ -1,11 +1,16 @@
 :root {
-    --color-background1: blue;   
-    --color-button1: red;
+    --color-background1: #146C94;
+    --color-background2: #19A7CE;
+    --color-button1: #AFD3E2;
+    --color-button2: var(--color-background1);
+    --color-text1: #F6F1F1;
 }
 *,
 *::before,
 *::after {
     align-items: center;
+    box-sizing: border-box;
+    color: var(--color-text1);
     font-family: 'Courier New', Courier, monospace;
     font-size: 10px;
     justify-content: center;
@@ -14,26 +19,39 @@
     text-align: center;
 }
 .hidden {
-    /* display: none; */
+    display: none;
 }
 /* These are our major containers and their elements. */
 body {
-    background-color: rgb(13, 9, 37);
     height: 100vh;
     width: 100vw;
 }
+body::after {
+    display: block;
+}
+    body > img:first-of-type {
+        object-fit: cover;
+        opacity: 0.1;
+    }
 header {
+    background-color: var(--color-background1);
     padding: 1% 10% 5% 10%;
 }
     header > div > p {
-        color: white;
         font-size: 5rem;
     }
 main {
-
+    background-color: var(--color-background2);
+    height: 100%;
+    padding: 5% 10%;
 }
+    .rounds > p{
+        font-size: 3rem;
+        margin: 3%;
+    }
 footer {
-
+    background-color: var(--color-background1);
+    padding: 3% 10% 1% 10%;
 }
 
 /* ---------- */
@@ -43,8 +61,20 @@ a {
     font-family: inherit;
     text-decoration: none;
 }
+button {
+    background-color: var(--color-button2);
+    border: none;
+    font-size: 3rem;
+    margin: 1% 2%;
+    padding: 1% 2%;
+}
+button:active {
+    background-color: var(--color-button1);
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
 input[type="image"] {
     height: auto;
+    margin: 1% 5%;
     width: 20%;
 }
 li {
