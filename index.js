@@ -9,63 +9,83 @@ var computerScore;
 var rounds;
 var currentRound;
 
+var selectRock = document.getElementById("rock");
+var selectPaper = document.getElementById("paper");
+var selectScissors = document.getElementById("scissors");
+
+var eSelector = document.getElementsByClassName("selector");
+var eChoices = document.getElementsByClassName("choices");
+
 const getComputerChoice = function() {
     return Math.floor(Math.random() * 3);
 }
 /* This function is called when the player clicked one of the buttons on the screen. */
-const playRound = function(playerChoice, computerChoice = getComputerChoice()) {
+const playRound = function(playerChoice, computerChoice) {
+    console.log(computerChoice);
     switch(playerChoice){
         case 0:
             switch(computerChoice){
                 case 0: 
-                    break;
+                    console.log("Tie");
+                    return;
                 case 1: 
-                    this.computerScore++; break;
+                    this.computerScore++;
+                    console.log("Lose");
+                    return;
                 case 2:
-                    this.playerScore++; break;
+                    this.playerScore++;
+                    console.log("Win");
+                    return;
             }
         case 1:
             switch(computerChoice){
                 case 0:
-                    this.playerScore++; break;
+                    this.playerScore++;
+                    console.log("Win");
+                    return;
                 case 1:
-                    break;
+                    console.log("Tie");
+                    return;
                 case 2:
-                    this.computerScore++; break;
+                    this.computerScore++; 
+                    console.log("Lose");
+                    return;
             }
         case 2:
             switch(computerChoice){
                 case 0:
-                    this.computerScore++; break;
+                    this.computerScore++;
+                    console.log("Lose");
+                    return;
                 case 1:
-                    this.playerScore++; break;
+                    this.playerScore++;
+                    console.log("Win");
+                    return;
                 case 2:
-                    break;
+                    console.log("Tie");
+                    return;
             }
     }
     /*
     At the end of the round, we check to see if there are any rounds left, and if there are, we display the choices again. 
     */
    if(this.currentRound < this.rounds){
-    displayChoices();
+        toggleElementVisibility(eChoices);
    }else{
     endGame();
    }
 }
 const playGame = function(rounds) {
     this.rounds = rounds;
-    /*
-    Once we determine how many rounds we play, we will hide the selection for rounds.
-    */
+    toggleElementVisibility(eSelector);
+    toggleElementVisibility(eChoices);
 }
-const displaySelector = function () {
-
-}
-const displayChoices = function() {
-
-}
-const displayWinner = function() {
-
+const toggleElementVisibility = function(a){
+    if(a.classList.contains('hidden')){
+        a.classList.remove(hidden);
+    }else{
+        a.classList.add(hidden);
+    }
 }
 const endGame = function() {
     if(this.playerScore > this.computerChoice){
@@ -83,14 +103,16 @@ const init = function(){
     this.computerScore = 0;
     this.rounds = 0;
     this.currentRound = 0;
-
-    let selectRock = document.getElementById("rock");
-    let selectPaper = document.getElementById("paper");
-    let selectScissors = document.getElementById("scissors");
-
-    let select = [selectRock, selectPaper, selectScissors];
+}
+function createListeners(){
+    let eButtons = document.querySelectorAll("button");
+    for(let x = 0; x < eButtons.length; x++){
+        eButtons[x].addEventListener("click", playGame(parseInt(eButtons[x].value)));
+    }
+    let select = [this.selectRock, this.selectPaper, this.selectScissors];
     for(let i = 0; i < select.length; i++){
-        console.log(select[i]);
+        select[i].addEventListener("click", playRound(parseInt(select[i].value), getComputerChoice()));
     }
 }
 init();
+createListeners();

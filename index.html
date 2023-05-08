@@ -25,19 +25,21 @@
         <section>
             <!-- This is going to be our section for choosing how many rounds. -->
             <p>You've heard of the classic game, rock-paper-scissors?! Well here it is, but with a medieval theme! To begin, select how many rounds you would like to play! Enjoy!</p>
-            <div class="select">
+            <div class="selector">
                 <p>How many rounds would you like to play?</p>
                 <div class="wrapper">
-                    <button type="button" id="one">1</button>
-                    <button type="button" id="three">3</button>
-                    <button type="button" id="five">5</button>
+                    <button type="button" id="one" value="1">1</button>
+                    <button type="button" id="three" value="3">3</button>
+                    <button type="button" id="five" value="5">5</button>
                 </div>
             </div>
             <!-- This is going to be our section for the choices of the game. -->
-            <div class="wrapper hidden">
-                <input type="image" id="rock"  value="0" src="./images/rock.png" alt="This is the image to select rock."> 
-                <input type="image" id="paper" value="1" src="./images/paper.png" alt="This is the image to select paper."> 
-                <input type="image" id="scissors" value="2" src="./images/scissors.png" alt="This is the image to select scissors."> 
+            <div class="choices hidden">
+                <div class="wrapper">
+                    <input type="image" id="rock"  value="0" src="./images/rock.png" alt="This is the image to select rock."> 
+                    <input type="image" id="paper" value="1" src="./images/paper.png" alt="This is the image to select paper."> 
+                    <input type="image" id="scissors" value="2" src="./images/scissors.png" alt="This is the image to select scissors."> 
+                </div>
             </div>
         </section>
     </main>
