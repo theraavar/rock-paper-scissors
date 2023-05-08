@@ -69,34 +69,35 @@ var currentRound;
 const getComputerChoice = function() {
     return Math.floor(Math.random() * 3);
 }
+/* This function is called when the player clicked one of the buttons on the screen. */
 const playRound = function(playerChoice, computerChoice = getComputerChoice()) {
     switch(playerChoice){
         case 0:
             switch(computerChoice){
                 case 0: 
-                    return;
+                    break;
                 case 1: 
-                    this.computerScore++; return;
+                    this.computerScore++; break;
                 case 2:
-                    this.playerScore++; return;
+                    this.playerScore++; break;
             }
         case 1:
             switch(computerChoice){
                 case 0:
-                    this.playerScore++; return;
+                    this.playerScore++; break;
                 case 1:
-                    return;
+                    break;
                 case 2:
-                    this.computerScore++; return;
+                    this.computerScore++; break;
             }
         case 2:
             switch(computerChoice){
                 case 0:
-                    this.computerScore++; return;
+                    this.computerScore++; break;
                 case 1:
-                    this.playerScore++; return;
+                    this.playerScore++; break;
                 case 2:
-                    return;
+                    break;
             }
     }
     /*
