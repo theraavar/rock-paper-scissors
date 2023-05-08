@@ -47,9 +47,9 @@ const playRound = function(playerChoice, computerChoice = getComputerChoice()) {
     At the end of the round, we check to see if there are any rounds left, and if there are, we display the choices again. 
     */
    if(this.currentRound < this.rounds){
-    displayChoices;
+    displayChoices();
    }else{
-    endGame;
+    endGame();
    }
 }
 const playGame = function(rounds) {
@@ -75,8 +75,8 @@ const endGame = function() {
     }else{
         //TIE
     }
-    init;
-    displaySelector;
+    init();
+    displaySelector();
 }
 const init = function(){
     this.playerScore = 0;
@@ -86,11 +86,11 @@ const init = function(){
 
     let selectRock = document.getElementById("rock");
     let selectPaper = document.getElementById("paper");
-    let selectScissors = document.getElementById("paper");
+    let selectScissors = document.getElementById("scissors");
 
     let select = [selectRock, selectPaper, selectScissors];
     for(let i = 0; i < select.length; i++){
         console.log(select[i]);
     }
 }
-init;
+init();
