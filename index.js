@@ -1,11 +1,13 @@
 var playerScore;
 var computerScore;
 
-function playGame(numberOfRounds){
+var currentRound;
+var totalRounds;
 
+function playGame(numberOfRounds){
+    this.totalRounds = numberOfRounds;
 }
 function playRound(playerSelection, computerSelection = getComputerSelection()){
-    playerSelection = 1;
     if(playerSelection === computerSelection){
         return "It is a tie!";
     }
@@ -33,3 +35,10 @@ function playRound(playerSelection, computerSelection = getComputerSelection()){
 function getComputerSelection(){
     return Math.floor(Math.random() * 3);
 }
+function init(){
+    this.playerScore = 0;
+    this.computerScore = 0;
+    this.currentRound = 0;
+    this.totalRounds = 0;
+}
+init();
