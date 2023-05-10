@@ -1,8 +1,10 @@
 /* These are variables related to our DOM. */
-var eRounds = document.querySelector(".container-rounds");
-var eChoices = document.querySelector(".container-choices");
-var eWinner = document.querySelector(".container-winner");
-
+var eRounds = document.getElementById("rounds");
+var eChoices = document.getElementById("choices");
+var eWinner = document.getElementById("results");
+var ePlayerScore = document.getElementById("scores").getElementsByClassName("player")[0];
+var eComputerScore = document.getElementById("scores").getElementsByClassName("computer")[0];
+console.log(ePlayerScore, eComputerScore);
 /* This is a simple toggle for whether the element is displayed or not. */
 function toggleVisibility(e){
     if(e.style.display === "none"){

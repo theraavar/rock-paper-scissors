@@ -22,23 +22,33 @@
         </div>
     </header>
     <main>
-        <section class="container-rounds">
+        <section class="container" id="rounds">
             <p>The Knights of the Round Table require your assistance in defeating their enemy, Lord Morgrath. However, he only has a single weakness; losing in a game of Rock, Parchment, Sword! Can you save them?!</p>
             <p>Select how many rounds you are willing to risk in this epic battle!</p>
-            <div class="buttons-rounds">
+            <div class="buttons">
                 <button type="button" onClick="playGame(1)">1</button>
                 <button type="button" onClick="playGame(3)">3</button>
                 <button type="button" onClick="playGame(5)">5</button>
             </div>
         </section>
-        <section class="container-choices">
-            <div class="buttons-choices">
+        <section class="container" id="scores">
+            <div id="player">
+                <p>Player:</p>
+                <p class="score">0</p>
+            </div>
+            <div id="computer">
+                <p>Computer:</p>
+                <p class="score">0</p>
+            </div>
+        </section>
+        <section class="container" id="choices">
+            <div class="buttons">
                 <button type="button" onClick="playRound(0)"><img src="./images/rock.png" alt="Click this to select rock."></button>
                 <button type="button" onClick="playRound(1)"><img src="./images/paper.png" alt="Click this to select paper."></button>
                 <button type="button" onClick="playRound(2)"><img src="./images/scissors.png" alt="Click this to select scissors."></button>
             </div>
         </section>
-        <section class="container-winner" >
+        <section class="container" id="results" >
             
         </section>
     </main>
